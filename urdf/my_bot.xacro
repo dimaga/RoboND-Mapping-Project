@@ -1,41 +1,41 @@
 <?xml version='1.0'?>
 
 <robot name="my_bot" xmlns:xacro="http://www.ros.org/wiki/xacro">
-  <xacro:include filename="$(find rtab_bot)/urdf/my_bot.gazebo" />
-  <link name="robot_footprint"></link>
+    <xacro:include filename="$(find slam_project)/urdf/my_bot.gazebo" />
+    <link name="robot_footprint"></link>
 
-  <joint name="robot_footprint_joint" type="fixed">
-    <origin xyz="0 0 0" rpy="0 0 0" />
-    <parent link="robot_footprint"/>
-    <child link="chassis" />
-  </joint>
+    <joint name="robot_footprint_joint" type="fixed">
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <parent link="robot_footprint"/>
+        <child link="chassis" />
+    </joint>
 
-  <link name='chassis'>
-    <pose>0 0 0.071 0 0 0</pose>
+    <link name='chassis'>
+        <pose>0 0 0.071 0 0 0</pose>
 
-    <inertial>
-      <mass value="10.0"/>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
-      <inertia
-          ixx="0.10833" ixy="0" ixz="0"
-          iyy="0.10833" iyz="0"
-          izz="0.2"
-      />
-    </inertial>
+        <inertial>
+            <mass value="10.0"/>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <inertia
+                ixx="0.10833" ixy="0" ixz="0"
+                iyy="0.10833" iyz="0"
+                izz="0.2"
+            />
+        </inertial>
 
-    <collision name='collision'>
-      <origin xyz="0 0 0" rpy="0 0 0"/> 
-      <geometry>
-        <cylinder radius="0.2" length="0.1"/>
-      </geometry>
-    </collision>
+        <collision name='collision'>
+            <origin xyz="0 0 0" rpy="0 0 0"/> 
+            <geometry>
+                <cylinder radius="0.2" length="0.1"/>
+            </geometry>
+        </collision>
 
-    <visual name='chassis_visual'>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
-      <geometry>
-        <cylinder radius="0.2" length="0.1"/>
-      </geometry>
-    </visual>
+        <visual name='chassis_visual'>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <cylinder radius="0.2" length="0.1"/>
+            </geometry>
+        </visual>
   </link>
   
   <link name='caster'>
