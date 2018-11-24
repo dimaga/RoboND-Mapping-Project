@@ -7,14 +7,6 @@
     <arg name="depth_topic" default="/camera/depth/image_raw"/>
     <arg name="camera_info_topic" default="/camera/rgb/camera_info"/>  
 
-    <!-- Kinect cloud to laser scan -->
-    <node pkg="depthimage_to_laserscan" type="depthimage_to_laserscan" name="depthimage_to_laserscan">
-      <remap from="image" to="$(arg depth_topic)"/>
-      <remap from="camera_info" to="$(arg camera_info_topic)"/>
-      <remap from="scan" to="/scan"/>
-      <param name="range_max" type="double" value="4"/>
-    </node>
-
     <!-- Mapping Node -->
     <group ns="rtabmap">
         <node name="rtabmap" pkg="rtabmap_ros" type="rtabmap" output="screen" args="--delete_db_on_start">
