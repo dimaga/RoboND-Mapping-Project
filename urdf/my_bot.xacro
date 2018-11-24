@@ -150,7 +150,7 @@
     <dynamics damping="0.1" friction="0.1"/>
   </joint>
 
-  <link name='camera'>
+  <link name='camera_depth_frame'>
     <pose>0 0 0 0 0 0</pose>
 
     <inertial>
@@ -181,7 +181,7 @@
 
   <joint type="fixed" name="camera_joint">
     <origin xyz="0.2 0.0 0.0" rpy="0 0 0"/>
-    <child link="camera"/>
+    <child link="camera_depth_frame"/>
     <parent link="chassis"/>
   </joint>
 

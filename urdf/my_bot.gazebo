@@ -18,7 +18,7 @@
     </plugin>
   </gazebo>
 
-  <gazebo reference="camera">
+  <gazebo reference="camera_depth_frame">
     <material>Gazebo/Green</material>
     <sensor type="depth" name="camera1">
         <always_on>1</always_on>
@@ -44,7 +44,7 @@
             <alwaysOn>true</alwaysOn>
             <updateRate>10.0</updateRate>
             <cameraName>camera</cameraName>
-            <frameName>camera_rgbd_frame</frameName>                   
+            <frameName>camera_depth_frame</frameName>                   
             <imageTopicName>rgb/image_raw</imageTopicName>
             <depthImageTopicName>depth/image_raw</depthImageTopicName>
             <pointCloudTopicName>depth/points</pointCloudTopicName>
