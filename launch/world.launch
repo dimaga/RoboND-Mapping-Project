@@ -16,7 +16,7 @@
     <node name="robot_state_publisher" pkg="robot_state_publisher" 
      type="robot_state_publisher" respawn="false" output="screen"/>
  
-    <arg name="world_file" default="$(find slam_project)/worlds/kitchen_dining.world"/> 
+    <arg name="world_file" default="$(find slam_project)/worlds/my.world"/> 
     <arg name="paused" default="false"/>
     <arg name="use_sim_time" default="true"/>
     <arg name="gui" default="true"/>
